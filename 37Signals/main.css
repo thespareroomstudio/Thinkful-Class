@@ -1,0 +1,162 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+/*h1, h2, h3, h4, h5, h6,*/ p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  end reset */
+
+body {
+	text-align: center;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	padding-left: 3.55em;
+	padding-right: 3.55em;
+}
+
+nav ul li {
+	display: inline-block;
+	padding-left: 1.2em;
+}
+
+nav ul li a {
+	display: block;
+	text-decoration: none;
+	font-size: .75em;
+	color: #369;
+}
+
+nav ul li a:hover {
+	color: #18afe0;
+}
+
+header nav {
+	text-align: right;
+}
+
+header p {
+	font-size: .75em;
+	color: gray;
+}
+
+header {
+	height: 3.2em;
+	margin-top: 1.45em;
+	
+}
+
+.left {
+	float: left;
+}
+
+.button {
+	display: inline-block;
+	background: -webkit-linear-gradient(#fff, #efefef);
+  	background:    -moz-linear-gradient(#fff, #efefef);
+  	background:     -ms-linear-gradient(#fff, #efefef);
+  	background:      -o-linear-gradient(#fff, #efefef);
+  	background:         linear-gradient(#fff, #efefef);
+	width: 160px;
+	vertical-align: top;
+	text-decoration: none;
+	margin-left: 1.7em;
+	padding: .9em;
+	border: 1px solid #e8e8e8;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #efefef;
+	margin-bottom: 1em;
+
+
+}
+
+.button p {
+	font-size: .9em;
+	color: #000;
+	line-height: 1.3;
+}
+
+.button h3 {
+	color: #369;
+	text-decoration: underline;
+}
+
+.button h4 {
+	color: red;
+}
+
+.standout {
+	color: #18afe0;
+}
+
+.standout:hover {
+	color: #369;
+}
+
+.copyright {
+	color: gray;
+	font-size: 60%;
+	vertical-align: top;
+	text-decoration: none; 
+}
+
+#main_heading {
+	width: 75%;
+	font-size: 350%;
+	font-family: "CrimsonSemibold", "Times New Roman", Georgia, serif;
+	font-weight: 600;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main_para {
+	font-family: "CrimsonSemibold", "Times New Roman", Georgia, serif;
+	margin-bottom: 2em;
+}
+
