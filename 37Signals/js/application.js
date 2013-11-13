@@ -6,6 +6,7 @@ $(function(){
 	
 	// when an element with the class "button" is hovered over, figure out which button it is, and then show/hide the corresponding elements
 	$('.button').hover(function() {
+
 		var arrow = $(this).children(".no_show");											// the arrow png's original state is hidden, hence , the class "no_show"
 		var identity = $(this).children().children(".btn_head");							// each button has a heading, all with the class ".btn_head".  Get current heading
 		var heading_id = identity.text().toLowerCase().trim();								// and then find it's text to determine which one so we can cross-reference with heading's IDs
