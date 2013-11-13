@@ -1,10 +1,12 @@
 $(function(){
 	var secretNum = init();
-	$('td').click(fucntion() {
+	console.log("The secret number is: " + secretNum);
+	$('td').click(function() {
 		var userNum = $(this).text();
+		console.log("User choose: " + userNum);
 		var feedback = compare(userNum, secretNum);
-		$(#message).text() = feedback;
-	})
+		$('#message').text(feedback);
+	});
 	
 
 	function init() {
@@ -13,12 +15,19 @@ $(function(){
 	}
 
 	function compare(userNum, secretNum) {
-		var difference = (userNum - secretNum) * 1;
+		var difference = (userNum - secretNum);
+		if (difference < 0) {
+			difference = difference * -1;
+		}
+		console.log("The difference between them is: " + difference);
 		if (userNum == secretNum) {
-			return "Holy cow, you got it on the first try.  Good job!";
+			return "Ding ding ding!  You got it!";
 		} else
-		if (difference > 5 && difference < 10) {
+		if (difference > 0 && difference < 5) {
 			return "Fire! Fire! Someone call the fire department!";
+		}
+		if (difference > 5 && difference < 10) {
+			return "My skin is burning.  I feel like I'm about to combust!";
 		} else
 		if (difference > 10 && difference < 15) {
 			return "I'm pouring sweat, it's so hot in here.";
@@ -49,7 +58,8 @@ $(function(){
 		} else
 		if (difference > 95) {
 			return "Welome to the Ice Age.  Seriously, you can't get any colder than this";
-		}
+		} else
+		return "There was an error.";
 	}
 
 });
