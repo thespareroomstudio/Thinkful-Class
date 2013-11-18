@@ -1,45 +1,62 @@
 <html>
 	<head>
 		<title>Hot or Cold</title>
+		<!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,900&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'> !-->
+		<llink href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<llink href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
+		<llink href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="shortcut icon" href="favicon.ico">
 		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.color-2.1.2.js"></script>
 		<script type="text/javascript" src="js/hc.js"></script>
 		<meta charset=UTF-"8" />
 	</head>
 	<body>
-		<table>
-			<tr>
-				<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
-			</tr>
-			<tr>
-				<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
-			</tr>
-			<tr>
-				<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
-			</tr>
-			<tr>
-				<td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td>
-			</tr>
-			<tr>
-				<td>41</td><td>42</td><td>43</td><td>44</td><td>45</td><td>46</td><td>47</td><td>48</td><td>49</td><td>50</td>
-			</tr>
-			<tr>
-				<td>51</td><td>52</td><td>53</td><td>54</td><td>55</td><td>56</td><td>57</td><td>58</td><td>59</td><td>60</td>
-			</tr>
-			<tr>
-				<td>61</td><td>62</td><td>63</td><td>64</td><td>65</td><td>66</td><td>67</td><td>68</td><td>69</td><td>70</td>
-			</tr>
-			<tr>
-				<td>71</td><td>72</td><td>73</td><td>74</td><td>75</td><td>76</td><td>77</td><td>78</td><td>79</td><td>80</td>
-			</tr>
-			<tr>
-				<td>81</td><td>82</td><td>83</td><td>84</td><td>85</td><td>86</td><td>87</td><td>88</td><td>89</td><td>90</td>
-			</tr>
-			<tr>
-				<td>91</td><td>92</td><td>93</td><td>94</td><td>95</td><td>96</td><td>97</td><td>98</td><td>99</td><td>100</td>
-			</tr>
-		</table>
-	<div id="message">Bet you can't guess my number!  Click one to guess.</div>
+		<aside>
+			<h1>Welcome to <span class="russo">Hot or Cold</span>.</h1>
+			<p>I've picked a random number betwen 1 and 100.  Use the table to the right to choose the number you think I've choosen.</p>  
+			<p>You have a few clues to help you out.  First, the table has a background that is color coded to help you zero in on the location of the number.  Each number you click will reveal part of the background. Red means you are really close, orange is kinda of close, light blue is far away, and dark blue is really far away.  Keep in mind the colors are relative to the position of the random number on the table.</p>
+			<p>I will also give you witty comments (don't forget to laugh at them!) to let you know how close the number you have choosen is to the secret number.  The hotter I am, the closer you are.</p>
+			<p>Lastly, the background color will change based on your previous choice.  If my secret number is 10 and you first chose 5, then you chose 6, you will see a red background.  If you choose 4, the background will be blue.</p>
+		<div id="bldur"></div>
+		</aside>
+		
+		<main>
+			<h1 id="logo"><span id = "hot">Hot</span><span id="or">or</span><span id="cold">Cold</span></h1>
+			<table>
+				<tr>
+					<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+				</tr>
+				<tr>
+					<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+				</tr>
+				<tr>
+					<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+				</tr>
+				<tr>
+					<td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td>
+				</tr>
+				<tr>
+					<td>41</td><td>42</td><td>43</td><td>44</td><td>45</td><td>46</td><td>47</td><td>48</td><td>49</td><td>50</td>
+				</tr>
+				<tr>
+					<td>51</td><td>52</td><td>53</td><td>54</td><td>55</td><td>56</td><td>57</td><td>58</td><td>59</td><td>60</td>
+				</tr>
+				<tr>
+					<td>61</td><td>62</td><td>63</td><td>64</td><td>65</td><td>66</td><td>67</td><td>68</td><td>69</td><td>70</td>
+				</tr>
+				<tr>
+					<td>71</td><td>72</td><td>73</td><td>74</td><td>75</td><td>76</td><td>77</td><td>78</td><td>79</td><td>80</td>
+				</tr>
+				<tr>
+					<td>81</td><td>82</td><td>83</td><td>84</td><td>85</td><td>86</td><td>87</td><td>88</td><td>89</td><td>90</td>
+				</tr>
+				<tr>
+					<td>91</td><td>92</td><td>93</td><td>94</td><td>95</td><td>96</td><td>97</td><td>98</td><td>99</td><td>100</td>
+				</tr>
+			</table>
+			<p id="message">Bet you can't guess my number!  Click one to guess.</p>
+		</main>
 	</body>
 </html>

@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	
 }
 
 ol, ul {
@@ -47,6 +48,7 @@ q:before, q:after {
 	content: none;
 }
 
+
 /* 
 table {
 	border-collapse: collapse;
@@ -55,25 +57,95 @@ table {
 
 /* end reset */
 
+
+body {
+    font-family: verdana, sans-serif;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255, 0.5)), to(rgba(64,64,64,0.5)));		/* Safari 4-5, Chrome 1-9 */
+  	background: -webkit-linear-gradient(circle, rgba(255,255,255, 0.0), rgba(255,255,255,0.15));							/* Safari 5.1, Chrome 10+ */
+  	background: -moz-linear-gradient(top, rgba(255,255,255, 0.5), rgba(64,64,64,0.5));								/* Firefox 3.6+ */
+  	background: -ms-linear-gradient(top, rgba(255,255,255, 0.5), rgba(64,64,64,0.5));								/* IE 10 */
+  	background: -o-linear-gradient(top, rgba(255,255,255, 0.5), rgba(64,64,64,0.5)));								/* Opera 11.10+ */
+	sbackground-color: rgb(255,102,0);
+}
+
+aside {
+	width: 30%;
+	float: left;
+	padding: 1em;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	color: #000;
+	background-color: #dbd0c3;
+	sbackground: rgba(255,255,255,.75);
+	sbackground-image: url('img/aside.png');
+	sbackground-repeat: repeat;
+	font-family: 'Viga', sans-serif;
+	sbackground: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255, 0.5)), to(rgba(64,64,64,0.5)));		/* Safari 4-5, Chrome 1-9 */
+  	sbackground: -webkit-linear-gradient(left, rgba(176,212,227,1), rgba(136,186,207,1));							/* Safari 5.1, Chrome 10+ */
+  	sbackground: -webkit-linear-gradient(left, rgba(255,255,255,0.15), rgba(255,255,255,.40));							/* Safari 5.1, Chrome 10+ */
+  	background: -webkit-linear-gradient(left, rgba(0,0,0,0.40), rgba(0,0,0,.0));							/* Safari 5.1, Chrome 10+ */
+  	sbackground: -webkit-radial-gradient(left, rgba(255,255,244,1), rgba(170,190,172,1));							/* Safari 5.1, Chrome 10+ */
+  	sbackground: -webkit-radial-gradient(center, ellipse cover, rgba(249,198,103,1) 0%,rgba(247,150,33,1) 100%); /* Chrome10+,Safari5.1+ */
+  	sbackground: -webkit-radial-gradient(center, ellipse cover, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Chrome10+,Safari5.1+ */
+  	sbackground: -webkit-linear-gradient(top, rgba(232, 17,15,.5), rgba(26, 106, 165,.5));
+  	sbackground: -webkit-linear-gradient(left, red, orange, yellow, #F0F8FF, #6495ED, #00008B);
+  	sbackground: -moz-linear-gradient(left, rgba(255,255,255, 0.5), rgba(64,64,64,0.5));								/* Firefox 3.6+ */
+  	sbackground: -ms-linear-gradient(left, rgba(255,255,255, 0.5), rgba(64,64,64,0.5));								/* IE 10 */
+  	sbackground: -o-linear-gradient(left, rgba(255,255,255, 0.5), rgba(64,64,64,0.5)));								/* Opera 11.10+ */
+
+	-webkit-box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+aside p {
+	margin-bottom: .5em;
+
+}
+
+.russo {
+	font-family: 'Russo One', sans-serif;
+}
+
+main {
+	margin-left: 30%;
+	text-align: center;
+	padding-top: 1em;
+}
+
+
 td {
-	/* border-radius: 5px; */
 	border: 1px solid black;
 	width: 50px;
 	height: 50px;
 	text-align: center;
 	vertical-align: center;
 	background-color: #fff;
+	padding-top: 15px;
+}
+
+td:hover {
+	cursor: pointer;
 }
 
 table {
-	border: 3px solid black;
+	border: 5px solid rgba(50,50,50,1);
 	border-radius: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1em;
-
 	border-spacing: 0;
+	/* box-shadow: 10px 10px 10px rgba(0,0,0,0.3); */
+	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
 
+}
+
+h1 {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #message {
@@ -83,4 +155,42 @@ table {
 	margin-right: auto;
 	/* border: 1px dashed black; */
 	text-align: center;
+}
+
+#blur {
+	-webkit-filter: blur(10px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: -webkit-linear-gradient(left, red, orange, yellow, #F0F8FF, #6495ED, #00008B);
+	z-index: -1;
+}
+
+#logo {
+	color: #fff;
+}
+
+#hot, #or, #cold {
+	padding: 0 .25em;
+	border-radius: 5px;
+}
+
+#hot {
+	border: 2px solid #A8110F;
+	background-color: #E8110F;
+}
+
+#cold {
+	border: 2px solid #1B0AA5;
+	background-color: #1B6AA5;
+}
+
+#or {
+	padding: 0 .25em;
+	color: #000;
+	border: none;
+	font-size: 50%;
+	display: inline-block;
 }
