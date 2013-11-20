@@ -19,12 +19,27 @@
 			<p>You have a few clues to help you out.  First, the table has a background that is color coded to help you zero in on the location of the number.  Each number you click will reveal part of the background. Red means you are really close, orange is kinda of close, light blue is far away, and dark blue is really far away.  Keep in mind the colors are relative to the position of the random number on the table.</p>
 			<p>I will also give you witty comments (don't forget to laugh at them!) to let you know how close the number you have choosen is to the secret number.  The hotter I am, the closer you are.</p>
 			<p>Lastly, the background color will change based on your previous choice.  If my secret number is 10 and you first chose 5, then you chose 6, you will see a red background.  If you choose 4, the background will be blue.</p>
-		<div id="bldur"></div>
+			<form action="" method="">
+				<fieldset id="controls">
+					<input type="submit" name="reset_btn" class="button" value="Restart">
+					<input type ="submit" name="show-bg_btn" class="button" value="Show Chart Background"><br>
+				</fieldset>
+				<fieldset id="options">
+					<input type ="checkbox" name="manual_ckbx" value="manaul">I would like to type in my guesses
+				</fieldset>
+				<fieldset id="manualInput">
+					<legend>Please enter your choice:</legend>
+					<input id="userInput" type="text" name="userNum_txt" size="4">
+					<input type="submit" name="userNum_btn" class="button" value="Make a Guess">
+					<p id = "frm_feedback"></p>
+				</fieldset>
+			</form>
+
 		</aside>
 		
 		<main>
 			<h1 id="logo"><span id = "hot">Hot</span><span id="or">or</span><span id="cold">Cold</span></h1>
-			<table>
+			<table id="hc_grid">
 				<tr>
 					<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
 				</tr>
