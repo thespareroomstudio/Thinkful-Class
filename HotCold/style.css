@@ -58,10 +58,14 @@ table {
 /* end reset */
 
 
+html {
+	height: 100%;
+}
+
 body {
     font-family: verdana, sans-serif;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255, 0.5)), to(rgba(64,64,64,0.5)));		/* Safari 4-5, Chrome 1-9 */
-  	background: -webkit-linear-gradient(circle, rgba(255,255,255, 0.0), rgba(255,255,255,0.85));							/* Safari 5.1, Chrome 10+ */
+  	background: -webkit-linear-gradient(circle, rgba(255,255,255, 0.0), rgba(255,255,255,0.85));					/* Safari 5.1, Chrome 10+ */
   	background: -moz-linear-gradient(top, rgba(255,255,255, 0.5), rgba(64,64,64,0.5));								/* Firefox 3.6+ */
   	background: -ms-linear-gradient(top, rgba(255,255,255, 0.5), rgba(64,64,64,0.5));								/* IE 10 */
   	background: -o-linear-gradient(top, rgba(255,255,255, 0.5), rgba(64,64,64,0.5)));								/* Opera 11.10+ */

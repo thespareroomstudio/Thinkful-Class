@@ -15,7 +15,7 @@ $(function(){
 	});
 	
 	// listen for input clicks
-	$('input').click(function(e){																			// turn of reloading the page on form submits
+	$('input :submit').click(function(e){																			// turn of reloading the page on form submits
 		e.preventDefault();
 	});
 	$('input[name="reset_btn"]').click(function() {															// when the reset btn is clicked, restart program
