@@ -49,9 +49,9 @@ $(function() {
 	}
 
 
-	$('#blur').blurjs({
+	/*$('#blur').blurjs({
 	source: 'body',
 	radius: 3
-});
+});*/
 
 });
