@@ -8,14 +8,13 @@ $(function(){
 	$('td').click(function() {																				// when user clicks a number then...
 		var userNum = $(this).text();																		// store the number and...
 		//console.log("User choose: " + userNum);
-		
 		var feedback = compare(userNum, secretNum);															// compare the choosen number with the secret number, then...
 		$('#message').text(feedback);																		// display a message to give the user some feedback, and...	
 		$(this).css("background-color", "inherit");															// change the background of the TD cell so we can see the table bg
 	});
 	
 	// listen for input clicks
-	$('input :submit').click(function(e){																			// turn of reloading the page on form submits
+	$('input :submit').click(function(e){																	// turn off reloading the page on form submits
 		e.preventDefault();
 	});
 	$('input[name="reset_btn"]').click(function() {															// when the reset btn is clicked, restart program
@@ -23,7 +22,7 @@ $(function(){
 		userHistory = null;
 		return secretNum;
 	});
-	$('input[name="show-bg_btn"]').click(function() {														// when the show backgrnd btn is clicked, change all the cells bg
+	$('input[name="show-bg_btn"]').click(function() {														// when the "show backgrnd btn" is clicked, change all the cells bg
 		$('#hc_grid td').css("background-color", "inherit")
 	});
 	$('input[name="manual_ckbx"]').click(function() {														// if the ckbx is clicked, show manual input box and btn
@@ -141,7 +140,7 @@ $(function(){
 		return "There was an error.";
 	};
 
-	// set the background color based on if the user was warmer or cooler from the their last choice
+	// set the background color based on if the user was warmer or cooler from their last choice
 	function setBackgroundColor(difference) {
 		var warm = "#CC0000";																				// red-ish
 		var cold = "#0066CC";																				// blue-ish
