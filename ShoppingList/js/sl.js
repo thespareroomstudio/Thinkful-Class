@@ -42,7 +42,8 @@ $(function() {
 	}	else {
 		$('input[name="submit-add_item"]').attr('disabled', true);
 	}
-	})
+	});
+
 	$('#input-list_item').on('focus', function () {
 		if (!itemAdded) {
 			$(this).val('');
