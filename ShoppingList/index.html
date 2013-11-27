@@ -3,6 +3,7 @@
 	<head>
 		<title>Your Shopping List</title>
 		<link href='http://fonts.googleapis.com/css?family=Maven+Pro:900,400,500,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="jquery-ui-1.10.3.custom.min.css">
 		<link rel="shortcut icon" href="favicon.ico">
@@ -14,17 +15,19 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
 	<main>
-		<form id="shopping-list">
+		
+		<form id="shopping-list" autocomplete="on">
 			<fieldset id="main">
-				<legend><input type="text" name="user_name" id="user_name" value="Your"><span class="hidden"></span> Shopping List</legend>
-				<fieldset id="instructions">
+				<legend><p id="edit_name">+</p><input type="text" name="user_name" id="user_name" value="Your"><span class="hidden"></span> Shopping List</legend>
+				<!--<fieldset id="instructions">
 					<p>Welcome to your shopping list. Add and delete items as you like.  You can even add your name clicking on "Your" above.  Add multiple items at once by seperating them with commas.</p>
-				</fieldset>
+				</fieldset> (We don't need no stinkin' instructions! !-->
 				<fieldset id="controls">
+					
 					<ul>
-						<li><input type="text" name="input-list_item" id="input-list_item" value="Click here to add items"></li>
-						<li><input type="submit" name="submit-add_item" value="Add Item(s)" class="button" id="add_item-btn"></li>
-						<li><input type="submit" name="submit-delete_item" value="Delete Item(s)" class="button"></li>
+						<li id ="list-item"><input type="text" name="input-list_item" id="input-list_item" value="Use commas to add multiple items"></li>
+						<li class="btn_holder"><input type="submit" name="submit-add_item" value="Add item(s)" class="button" id="add_item-btn"></li>
+						<li class="btn_holder"><input type="submit" name="submit-delete_item" value="Delete item(s)" class="button"></li>
 					<ul>
 				</fieldset>
 				<fieldset id="the_list">

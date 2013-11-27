@@ -1,30 +1,73 @@
 $(function() {
+	var itemAdded = false;
+	var checked = 0;
+	
+	$('input[name="submit-add_item"]').attr('disabled', true);
+	$('input[name="submit-delete_item"]').attr('disabled', true);
+	$('input[name="submit-add_item"]').click(addItem);
+	$('input[name="submit-delete_item"]').click(delItems);
+	$('#user_name').css("width", $('#user_name').siblings('span').first().width());
+	$('#user_name').change('input', flexInput);
+	
 	$('.button').click(function(e){																	// turn off reloading the page on form submits
 		e.preventDefault();
 	});
+
 	$('#the_list ul').sortable({
 		axis: "y", 
 		stop: styleList,
 		cursor: "move",
 		opacity: ".50"
 	});
-	flexInput();
-	$('input[name="submit-add_item"]').click(addItem);
-	$('input[name="submit-delete_item"]').click(delItems);
-	$('#pin').click(function() {
-		console.log('hi');
-		$(this).parent().remove();
-	});
-	$('#user_name').css("width", $('#user_name').siblings('span').first().width());
-	$('#user_name').change('input', flexInput);
 	
+	flexInput();
+	
+	$(this).on('click', '.ckbox', function() {
+		$(this).parent().find('label').toggleClass('complete');	
+		if ($(this).parent().find('input[type="checkbox"]').prop('checked')) {
+			$(this).parent().find('input[type="checkbox"]').prop('checked', false);
+			checked --;
+		}	else {
+			$(this).parent().find('input[type="checkbox"]').prop('checked', true);
+			checked ++;
+		}
+		if (checked > 0) {
+			$('input[name="submit-delete_item"]').attr('disabled', false);		
+		} else {
+			$('input[name="submit-delete_item"]').attr('disabled', true);
+		}
+	});
 
+	$(this).on('click', '#pin', function() {
+		$(this).parent().remove();
+		styleList();
+	});
+		
+	$('#input-list_item').keyup(function() {
+		if ($(this).val().length > 0) {
+		$('input[name="submit-add_item"]').attr('disabled', false);
+	}	else {
+		$('input[name="submit-add_item"]').attr('disabled', true);
+	}
+	})
+	$('#input-list_item').on('focus', function () {
+		if (!itemAdded) {
+			$(this).val('');
+		}
+	})
+
+	$('#edit_name').click(function() {
+		$('#user_name').focus();
+		$('#user_name').val('');
+	})
+	
 	function addItem() {
 		var items = $('#input-list_item').val().split(",");
 		for (var item = 0; item < items.length; item++)
 			if (items[item].trim() != "") {
-				$('#the_list ul').append('<li><a href="#" id="pin"><img src="img/thumbtack-odd.png" /></a><input type="checkbox" name=""><label>' + items[item].trim() + '</label><a href="" class="mini_controls ui-icon-cirlce-close"></a></li>');
+				$('#the_list ul').append('<li><a href="#" id="pin"><img src="img/thumbtack-odd.png" /></a><input type="checkbox" name=""><label>' + items[item].trim() + '</label><a href="#" class="ckbox"><img src="img/check.png" /></a></li>');
 			}
+		itemAdded = true;
 		$('#input-list_item').val('');
 		styleList();
 	}
@@ -45,6 +88,8 @@ $(function() {
 		var textFromInput = $('#user_name').val().trim();
 		var span = $('#user_name').siblings('span').first();
 		span.text(textFromInput);
+		console.log(span.text());
+		console.log(span.width());
 		$('#user_name').css("width", span.width());
 	}
 

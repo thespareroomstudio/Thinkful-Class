@@ -62,39 +62,45 @@ body {
 	text-align: center;
 }
 
-fieldset {
-	margin-top: 1em;
-}
-
 #the_list {
 	text-align: left;
 }
 
 #the_list input[type="checkbox"] {
-	width: 20px;
-	height: 20px;
-	border: 5px solid blue;
-	background-color: gray;
+	display: none;
 }
 
 #the_list ul li {
 	font-size: 150%;
+	font-family: "Permanent Marker", Verdana, sans-serif;
 	line-height: 1.5em;
 	padding: .5em;
 	position: relative;
 	padding-left: 50px;
-	color: rgba(0, 0, 0, .6);
+	color: rgba(0, 0, 0, 1);
 }
 
-#the_list ul li img {
+#pin img {
 	position: absolute;
 	top: 2px;
 	left: 0;
 }
 
+#the_list ul li label {
+
+}
+
 #the_list ul li img:hover {
 	top: 0;
 	left: -2px;
+}
+
+#the_list ul li:hover {
+	cursor: move;
+}
+
+#the_list ul li:hover > a {
+	display: inline-block;
 }
 
 #shopping-list {
@@ -107,6 +113,11 @@ fieldset {
 	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
 
+}
+
+#shopping-list fieldset {
+	margin-top: 1em;
+	padding: 0 .5em;
 }
 
 #controls li {
@@ -132,13 +143,9 @@ fieldset {
 	font-family: "Maven Pro", Verdana, sans-serif;
 	font-weight: 900;
 	color: rgba(139, 69, 19, .25);
-	
+	outline: none;
     text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
     background: inherit;
-}
-
-#user_name :focus {
-	background-color: #aaa;
 }
 
 #blur {
@@ -151,16 +158,56 @@ fieldset {
 }
 
 #input-list_item {
-	background-color: rgba(195, 129, 77, 0.5);
-	border: 0 0 2px 0 solid #A3612D;
-	height: 2em;
+	background-color: rgba(195, 129, 77, 0.8);
+	border-radius: 5px;
+	border: 2px solid rgba(195, 129, 77, 1);
+	-webkit-box-shadow:inset 0 0 2px #000;
+    -moz-box-shadow:inset 0 0 2px #000;
+    box-shadow:inset 0 0 2px #000;
+    padding: 0 .25em;
+	line-height: 1.5em;
 	width: 100%;
-	font-size: 100%;
+	font-size: 150%;
 	outline: none;
+	margin-bottom: .5em;
+	color: #222;
+
 }
+
+#list-item {
+	display: block !important;
+}
+
+#edit_name {
+	float: left;
+	color: #cc0000;
+	font-family: "Permanent Marker", Verdana, sans-serif;
+	font-size: 75%;
+	cursor: pointer;
+}
+
+.button {
+	font-family: "Permanent Marker", Verdana, sans-serif;
+	background: url('img/button.png') no-repeat;
+	height: 46px;
+	width: 125px;
+	border: 0;
+	font-size: 100%;
+	vertical-align: middle;
+	padding-top: -10px;
+	cursor: pointer;
+}
+
 
 .hidden {
 	display: none;
+}
+
+.ckbox {
+	position: absolute;
+	display: none;
+	right: 0;
+	top: 0;
 }
 
 .even_item {
@@ -169,4 +216,15 @@ fieldset {
 
 .odd_item {
 	/*background: url('img/paper-green.png') repeat-x;*/
+}
 
+.complete {
+	text-decoration: line-through;
+	font-size: italic;
+	color: #666;
+
+}
+
+#controls .block {
+	display: block;
+}
