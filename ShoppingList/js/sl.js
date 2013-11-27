@@ -31,11 +31,7 @@ $(function() {
 			$(this).parent().find('input[type="checkbox"]').prop('checked', true);
 			checked ++;
 		}
-		if (checked > 0) {
-			$('input[name="submit-delete_item"]').attr('disabled', false);		
-		} else {
-			$('input[name="submit-delete_item"]').attr('disabled', true);
-		}
+		numberOfChecked();
 	});
 
 	$(this).on('click', '#pin', function() {
@@ -74,6 +70,8 @@ $(function() {
 
 	function delItems() {
 		$('#the_list input:checked').parent().remove();
+		console.log($('#the_list input:checked'));
+		numberOfChecked();
 		styleList();
 		
 	}
@@ -91,6 +89,14 @@ $(function() {
 		console.log(span.text());
 		console.log(span.width());
 		$('#user_name').css("width", span.width());
+	}
+
+	function numberOfChecked() {
+		if (checked > 0) {
+			$('input[name="submit-delete_item"]').attr('disabled', false);		
+		} else {
+			$('input[name="submit-delete_item"]').attr('disabled', true);
+		}
 	}
 
 

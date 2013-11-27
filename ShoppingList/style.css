@@ -86,7 +86,8 @@ body {
 	left: 0;
 }
 
-#the_list ul li label {
+#the_list ul li label:hover {
+	cursor: move;
 
 }
 
@@ -106,8 +107,9 @@ body {
 #shopping-list {
 	background: url('img/cork2.png') repeat;
 	border-radius: 5px;
-	width: 33%;
-	min-height: 500px;
+	width: 500px;
+	/* max-width: 33%; */
+	/* min-height: 500px; */
 	margin: 0 auto;
 	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
 	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
