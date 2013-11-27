@@ -1,6 +1,5 @@
 $(function() {
 	var itemAdded = false;
-	var checked = 0;
 	
 	$('input[name="submit-add_item"]').attr('disabled', true);
 	$('input[name="submit-delete_item"]').attr('disabled', true);
@@ -26,12 +25,10 @@ $(function() {
 		$(this).parent().find('label').toggleClass('complete');	
 		if ($(this).parent().find('input[type="checkbox"]').prop('checked')) {
 			$(this).parent().find('input[type="checkbox"]').prop('checked', false);
-			checked --;
 		}	else {
 			$(this).parent().find('input[type="checkbox"]').prop('checked', true);
-			checked ++;
 		}
-		numberOfChecked();
+		stillChecked();
 	});
 
 	$(this).on('click', '#pin', function() {
@@ -70,8 +67,7 @@ $(function() {
 
 	function delItems() {
 		$('#the_list input:checked').parent().remove();
-		console.log($('#the_list input:checked'));
-		numberOfChecked();
+		stillChecked();
 		styleList();
 		
 	}
@@ -91,8 +87,8 @@ $(function() {
 		$('#user_name').css("width", span.width());
 	}
 
-	function numberOfChecked() {
-		if (checked > 0) {
+	function stillChecked() {
+		if ($('#the_list input:checked').parent().length > 0) {
 			$('input[name="submit-delete_item"]').attr('disabled', false);		
 		} else {
 			$('input[name="submit-delete_item"]').attr('disabled', true);
