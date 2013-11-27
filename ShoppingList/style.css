@@ -196,6 +196,7 @@ body {
 	vertical-align: middle;
 	padding-top: -10px;
 	cursor: pointer;
+	outline-width: none;
 }
 
 
